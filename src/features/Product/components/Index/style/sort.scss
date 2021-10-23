@@ -1,0 +1,41 @@
+.dropdown {
+  position: relative;
+
+  .drop-toggle {
+    cursor: pointer;
+    padding: 10px 30px;
+    border: 1px solid #c7cdd4;
+
+    .drop-title {
+      font-weight: 600;
+
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .drop-menu {
+    position: absolute;
+    padding: 10px 0;
+    border-left: 1px solid #c7cdd4;
+    border-right: 1px solid #c7cdd4;
+    border-bottom: 1px solid #c7cdd4;
+    background-color: white;
+    width: 200px;
+    right: 0;
+
+    .drop-item {
+      cursor: pointer;
+      padding: 5px 20px;
+
+      &:hover {
+        background-color: #ccccd4;
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}

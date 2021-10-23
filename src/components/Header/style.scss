@@ -1,0 +1,43 @@
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: white;
+  border-bottom: 1px solid #fafafa;
+  box-shadow: 0 1px 5px rgb(200, 214, 229);
+
+  #isHeader {
+    .row {
+      display: flex;
+      align-items: center;
+      height: 79px;
+
+      .brand {
+        font-weight: bold;
+        font-size: 30px;
+
+        .brand-title {
+          color: #2f3542;
+        }
+      }
+
+      .navbar {
+        text-align: right;
+
+        .nav-link {
+          text-transform: uppercase;
+
+          &:hover {
+            font-weight: 600;
+          }
+
+          &.active {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

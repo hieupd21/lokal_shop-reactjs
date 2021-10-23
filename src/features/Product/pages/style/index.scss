@@ -1,0 +1,51 @@
+#isContent {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+
+  #isBanner {
+    background-image: url("https://images.contentstack.io/v3/assets/blt818b0c67cf450811/bltc49e5f236260ece1/5e85fc05b01b81301599b464/browse-headersStreetwear.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 20px;
+
+    .banner-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+      margin-left: 50px;
+
+      .text-one {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      .text-two {
+        font-size: 18px;
+        width: 400px;
+      }
+    }
+  }
+
+  #isProduct {
+    .product-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+  }
+}

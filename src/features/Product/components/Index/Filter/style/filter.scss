@@ -1,0 +1,49 @@
+.filter-category {
+  margin: 15px 0;
+
+  .filter-category-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #2f3542;
+    margin-bottom: 20px;
+  }
+
+  .filter-category-item {
+    margin: 10px 0 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+.filter-price {
+  margin: 35px 0;
+
+  .filter-price-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #2f3542;
+    margin-bottom: 20px;
+  }
+
+  .filter-price-input {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    span {
+      margin: 0 10px;
+    }
+  }
+
+  .filter-price-button {
+    span {
+      color: white !important;
+    }
+  }
+}
