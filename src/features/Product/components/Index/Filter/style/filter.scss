@@ -47,3 +47,12 @@
     }
   }
 }
+
+.filter-viewer-list {
+  padding: 10px 0;
+  display: flex;
+
+  .filter-viewer-item {
+    margin-right: 10px;
+  }
+}

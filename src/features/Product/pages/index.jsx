@@ -10,6 +10,7 @@ import ProductSkeleton from "../components/Index/ProductSkeleton";
 import ProductSort from "../components/Index/ProductSort";
 import "./style/index.scss";
 import queryString from "query-string";
+import ByViewer from "../components/Index/Filter/ByViewer";
 
 export default function ProductIndex() {
   const history = useHistory();
@@ -44,10 +45,13 @@ export default function ProductIndex() {
       } catch (error) {
         console.log("fetch product api: ", error);
       }
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
     };
     fetchProducts();
-  }, [filters]);
+    clearTimeout(loading);
+  }, [filters, loading]);
 
   const handlePaginationChange = (e, page) => {
     setFilters((prevFilters) => ({
@@ -68,6 +72,11 @@ export default function ProductIndex() {
       ...prevFilters,
       ...values,
     }));
+  };
+
+  const handleViewChange = (value) => {
+    setFilters(value);
+    console.log(value);
   };
 
   return (
@@ -97,6 +106,8 @@ export default function ProductIndex() {
 
             <ProductSort onSortChange={handleSortChange} />
           </div>
+
+          <ByViewer filters={filters} onViewChange={handleViewChange} />
 
           {loading ? (
             <ProductSkeleton onFilterChange={handleFilterChange} />
