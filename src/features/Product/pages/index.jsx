@@ -11,6 +11,7 @@ import ProductSort from "../components/Index/ProductSort";
 import "./style/index.scss";
 import queryString from "query-string";
 import ByViewer from "../components/Index/Filter/ByViewer";
+import { useRef } from "react";
 
 export default function ProductIndex() {
   const history = useHistory();
@@ -28,6 +29,10 @@ export default function ProductIndex() {
     _limit: Number.parseInt(queryParams._limit) || 20,
     _sort: queryParams._sort || "salePrice:ASC",
   });
+  const countFilter = Object.keys(filters).length;
+
+  const menuLeft = useRef(null);
+  const menuToggle = () => menuLeft.current.classList.toggle("active");
 
   useEffect(() => {
     history.push({
@@ -76,7 +81,6 @@ export default function ProductIndex() {
 
   const handleViewChange = (value) => {
     setFilters(value);
-    console.log(value);
   };
 
   return (
@@ -90,12 +94,20 @@ export default function ProductIndex() {
             </p>
           </div>
         </div>
-        <div className="col p-3" id="isCategory">
-          <ProductFilter onFilterChange={handleFilterChange} />
+        <div className="col p-3 t-12 m-12" id="isCategory" ref={menuLeft}>
+          <ProductFilter
+            onFilterChange={handleFilterChange}
+            menuToggle={menuToggle}
+          />
         </div>
-        <div className="col p-9" id="isProduct">
+        <div className="col p-9 t-12 m-12" id="isProduct">
           <div className="product-head">
-            <Breadcrumbs aria-label="breadcrumb">
+            <div className="filter-box">
+              <p onClick={menuToggle}>
+                Bộ lọc: <span>{countFilter}</span>
+              </p>
+            </div>
+            <Breadcrumbs aria-label="breadcrumb" className="breadcrumb">
               <Link color="inherit" to="/">
                 Trang chủ
               </Link>

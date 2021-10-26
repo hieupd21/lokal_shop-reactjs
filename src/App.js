@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProductFeature from "./features/Product";
 
@@ -9,6 +10,7 @@ export default function App() {
       <Switch>
         <Route path="/products" component={ProductFeature} />
       </Switch>
+      <Footer />
     </div>
   );
 }

@@ -20,7 +20,7 @@ function ProductSort({ onSortChange = null }) {
     <div className="dropdown">
       <div className="drop-toggle" onClick={() => setActive(!active)}>
         <p className="drop-title">
-          Sắp xếp theo: <span>{selected ? selected : "Giá tăng dần"}</span>
+          Sắp xếp: <span>{selected ? selected : "Giá tăng dần"}</span>
         </p>
       </div>
 

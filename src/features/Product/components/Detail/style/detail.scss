@@ -1,13 +1,10 @@
 #isDetail {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  right: 0;
+  margin-top: 80px;
 
   #detail-info {
     border: 1px solid #e2e8f0;
     padding: 10px 0;
-    margin: 30px 0;
+    margin: 100px 0 30px 0;
 
     .col-thumbnail {
       border-right: 1px solid #e2e8f0;

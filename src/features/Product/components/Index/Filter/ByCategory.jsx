@@ -6,9 +6,10 @@ import CategorySkeleton from "./CategorySkeleton";
 
 ByCategory.propTypes = {
   onCategoryChange: PropTypes.func,
+  menuToggle: PropTypes.func,
 };
 
-function ByCategory({ onCategoryChange = null }) {
+function ByCategory({ onCategoryChange = null, menuToggle }) {
   const [category, setCategory] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -27,6 +28,7 @@ function ByCategory({ onCategoryChange = null }) {
 
   const handleClickCategory = (id, name) => {
     if (onCategoryChange) onCategoryChange(id, name);
+    menuToggle();
   };
 
   return (

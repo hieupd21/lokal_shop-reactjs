@@ -1,5 +1,21 @@
 .product-rela {
   width: 100%;
+  margin-bottom: 20px;
+
+  &-title {
+    margin-bottom: 10px;
+    border-top: 1px solid #e2e8f0;
+
+    span {
+      display: inline-block;
+      background-color: #dcdde1;
+      padding: 8px 15px;
+      color: #2f3542;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
 
   .carousel-wrapper {
     .rec-carousel {
@@ -26,10 +42,11 @@
       .rec-slider-container {
         .rec-carousel-item {
           .rela-wrapper {
+            cursor: pointer;
             margin: 10px;
             padding: 10px;
             border: 1px solid #e2e8f0;
-            transition: all 0.5s;
+            transition: all 0.3s;
 
             .product-image {
               img {
@@ -44,6 +61,7 @@
             }
 
             &:hover {
+              box-shadow: 0 5px 10px rgb(210, 218, 226);
               transform: translateY(-10px);
             }
           }

@@ -38,4 +38,19 @@
       display: block;
     }
   }
+
+  @media only screen and (max-width: 1023px) {
+    width: 49%;
+    text-align: center;
+
+    .drop-toggle {
+      font-size: 14px;
+      padding: 10px 10px;
+    }
+
+    .drop-menu {
+      font-size: 14px;
+      width: 150px;
+    }
+  }
 }

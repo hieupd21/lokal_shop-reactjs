@@ -5,9 +5,10 @@ import { Button, TextField } from "@material-ui/core";
 
 ByPrice.propTypes = {
   onPriceChange: PropTypes.func,
+  menuToggle: PropTypes.func,
 };
 
-function ByPrice({ onPriceChange = null }) {
+function ByPrice({ onPriceChange = null, menuToggle }) {
   const [price, setPrice] = useState({
     salePrice_gte: 0,
     salePrice_lte: 0,
@@ -15,6 +16,7 @@ function ByPrice({ onPriceChange = null }) {
 
   const handleChangePrice = () => {
     if (onPriceChange) onPriceChange(price);
+    menuToggle();
   };
 
   const handleChangeInput = (e) => {

@@ -31,7 +31,9 @@ function ProductRela({ productRela = null }) {
 
   return (
     <div className="product-rela">
-      <h2>Sản phẩm liên quan</h2>
+      <div className="product-rela-title">
+        <span>Sản phẩm liên quan</span>
+      </div>
       <div className="carousel-wrapper">
         <Carousel breakPoints={breakPoints}>
           {randomProduct.slice(0, 8).map((product) => (

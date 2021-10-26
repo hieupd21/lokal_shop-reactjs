@@ -1,0 +1,18 @@
+.filter-list {
+  .close-button {
+    display: none;
+
+    @media only screen and (max-width: 1023px) {
+      display: block;
+      font-size: 23px;
+      transition: all 0.3s;
+      text-align: right;
+      cursor: pointer;
+      padding: 10px 10px 0 0;
+
+      &:hover {
+        transform: translateX(-5px);
+      }
+    }
+  }
+}
