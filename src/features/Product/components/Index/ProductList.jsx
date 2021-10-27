@@ -11,7 +11,7 @@ function ProductList({ products = [] }) {
   return (
     <div className="row product-list">
       {products.map((product) => (
-        <div className="col product-item p-3 t-4 m-12" key={product.id}>
+        <div className="col product-item p-3 t-4 m-6" key={product.id}>
           <ProductItem product={product} />
         </div>
       ))}
