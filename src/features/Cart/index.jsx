@@ -23,7 +23,7 @@ function CartFeature() {
       <div className="container wide">
         <div className="row">
           <div className="col p-12 t-12 m-12 cart-header">
-            <p className="cart-header-title">Giỏ hàng của bạn</p>
+            <p className="cart-header-title">Giỏ hàng của bạn nè</p>
           </div>
           <div className="col p-8 t-6 m-12 cart-list">
             {cartInfo.length > 0 ? (
