@@ -18,7 +18,7 @@ function LandingPage() {
           <Swiper
             centeredSlides={true}
             autoplay={{
-              delay: 4000,
+              delay: 2000,
               disableOnInteraction: false,
             }}
             className="mySwiper"
@@ -35,7 +35,7 @@ function LandingPage() {
             <Swiper
               direction={"vertical"}
               autoplay={{
-                delay: 4000,
+                delay: 3000,
                 disableOnInteraction: false,
               }}
               className="mySwiper"
@@ -64,14 +64,14 @@ function LandingPage() {
             </Swiper>
           </div>
         </div>
-        <div className="grid-content">
-          <div className="blur-ani"></div>
-          <Link to="/products">
-            <Button variant="contained" color="secondary" className="button">
-              MUA SẮM THÔI
-            </Button>
-          </Link>
-        </div>
+      </div>
+      <div className="grid-content">
+        <div className="blur-ani"></div>
+        <Link to="/products">
+          <Button variant="contained" className="button">
+            MUA SẮM THÔI
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -8,19 +8,25 @@
       .brand {
         a {
           display: inline-block;
-          background-color: white;
+          background-color: #a29bfe;
           padding: 5px 10px;
-          color: #2f3542;
+          color: black;
           font-weight: bold;
           font-size: 30px;
           margin-bottom: 5px;
+          border-radius: 6px;
+          transition: all 0.5s;
+
+          &:hover {
+            background-color: #7d5fff;
+          }
         }
       }
 
       .info {
         &-title {
           font-size: 25px;
-          color: white;
+          color: #a29bfe;
           font-weight: bold;
           text-transform: uppercase;
         }
@@ -29,7 +35,7 @@
           margin-top: 20px;
 
           p:first-child {
-            color: white;
+            color: #a29bfe;
             font-weight: bold;
             text-transform: uppercase;
             margin-bottom: 5px;
@@ -51,7 +57,7 @@
           justify-content: center;
           width: 30px;
           height: 30px;
-          background-color: #7e7e7e;
+          background-color: #a29bfe;
           border-radius: 50%;
           margin: 0 5px;
           transition: all 0.5s;
@@ -61,7 +67,7 @@
           }
 
           &:hover {
-            background-color: white;
+            background-color: #7d5fff;
           }
         }
       }
@@ -72,13 +78,19 @@
       border-top: 1px solid #7e7e7e;
 
       .copyright {
-        color: white;
+        color: #7e7e7e;
         text-align: center;
         font-size: 14px;
 
         a {
+          margin-left: 5px;
           font-weight: bold;
-          color: white;
+          color: #a29bfe;
+          transition: all 0.5s;
+
+          &:hover {
+            color: #7d5fff;
+          }
         }
       }
     }

@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
+  pointer-events: none;
+  filter: brightness(40%);
 
   .grid-left {
     width: 75%;
@@ -64,38 +66,6 @@
     }
   }
 
-  .grid-content {
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-
-    .button {
-      background-color: #e67e22;
-      color: black;
-      font-weight: bold;
-      animation: jumping 1s infinite linear alternate;
-
-      span {
-        font-size: 14px;
-      }
-    }
-
-    .blur-ani {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      z-index: 0;
-      width: 30px;
-      height: 30px;
-      background-color: #e67e22;
-      animation: blur 1s infinite linear;
-    }
-  }
-
   @media only screen and (max-width: 740px) {
     .grid-left {
       width: 100%;
@@ -104,6 +74,43 @@
     .grid-right {
       display: none;
     }
+  }
+}
+
+.grid-content {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  .button {
+    background-color: #a29bfe;
+    color: black;
+    font-weight: bold;
+    animation: jumping 1s infinite linear alternate;
+    transition: all 0.7s;
+
+    span {
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: #7d5fff;
+    }
+  }
+
+  .blur-ani {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #a29bfe;
+    animation: blur 1s infinite linear;
   }
 }
 

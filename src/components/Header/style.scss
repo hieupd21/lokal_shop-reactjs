@@ -4,9 +4,13 @@
   left: 0;
   right: 0;
   z-index: 99;
-  background-color: white;
-  border-bottom: 1px solid #fafafa;
-  box-shadow: 0 1px 5px rgb(200, 214, 229);
+  transition: all 0.7s;
+
+  &.scroll {
+    background-color: white;
+    // border-bottom: 1px solid #fafafa;
+    box-shadow: 0 1px 0.1px rgb(200, 214, 229);
+  }
 
   #isHeader {
     .row {
@@ -19,7 +23,12 @@
         font-size: 30px;
 
         .brand-title {
-          color: #2f3542;
+          color: #a29bfe;
+          transition: all 0.7s;
+
+          &.title-black {
+            color: #2f3542;
+          }
         }
       }
 
@@ -32,14 +41,37 @@
 
         .nav-link {
           text-transform: uppercase;
-          color: #2f3542;
+          color: #a29bfe;
+          font-weight: 600;
+          padding: 5px;
+          margin: 0 5px;
+          transition: all 0.7s;
 
-          &:hover {
-            font-weight: 600;
+          &.cart-link {
+            position: relative;
+
+            span {
+              position: absolute;
+              right: -10%;
+              top: -25%;
+              background: #ea2027;
+              border-radius: 50%;
+              width: 17px;
+              height: 17px;
+              line-height: 17px;
+              text-align: center;
+              font-size: 12px;
+              font-weight: 500;
+              color: white;
+            }
           }
 
           &.active {
-            font-weight: 600;
+            text-decoration: underline;
+          }
+
+          &.title-black {
+            color: #2f3542;
           }
         }
       }
@@ -79,7 +111,7 @@
           .nav-link {
             display: block;
             text-align: center;
-            color: white;
+            color: white !important;
             font-size: 20px;
             padding: 15px 0;
           }
@@ -92,7 +124,23 @@
         .bar-icon {
           order: 2;
           cursor: pointer;
-          text-align: right;
+
+          .icon-box {
+            font-size: 25px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            transition: all 0.7s;
+
+            .bars {
+              display: inline-flex;
+              color: #a29bfe;
+
+              &.title-black {
+                color: #2f3542;
+              }
+            }
+          }
         }
       }
     }

@@ -49,7 +49,7 @@ function DetailForm({ onQuantitySubmit = null }) {
         color="primary"
         className="button-form"
       >
-        Add to cart
+        Thêm vào giỏ
       </Button>
     </form>
   );

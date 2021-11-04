@@ -50,13 +50,10 @@ export default function ProductIndex() {
       } catch (error) {
         console.log("fetch product api: ", error);
       }
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
+      setLoading(false);
     };
     fetchProducts();
-    clearTimeout(loading);
-  }, [filters, loading]);
+  }, [filters]);
 
   const handlePaginationChange = (e, page) => {
     setFilters((prevFilters) => ({
@@ -131,7 +128,7 @@ export default function ProductIndex() {
             <Pagination
               count={Math.ceil(pagination.total / pagination.limit)}
               page={pagination.page}
-              variant="text"
+              variant="outlined"
               color="primary"
               onChange={handlePaginationChange}
             />

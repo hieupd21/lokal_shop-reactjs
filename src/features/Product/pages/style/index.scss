@@ -113,6 +113,18 @@
       display: flex;
       justify-content: center;
       padding: 30px;
+
+      .MuiPagination-ul {
+        li {
+          button {
+            &.Mui-selected {
+              color: #7d5fff;
+              border: 1px solid #7d5fff;
+              font-weight: bold;
+            }
+          }
+        }
+      }
     }
   }
 }

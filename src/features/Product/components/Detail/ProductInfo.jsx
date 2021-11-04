@@ -1,16 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./style/detail.scss";
-import DetailForm from "../../../form/DetailForm";
 import dateFormat from "dateformat";
+import PropTypes from "prop-types";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../Cart/redux/cartSlice";
+import DetailForm from "../../../Form/DetailForm";
+import "./style/detail.scss";
 
 ProductInfo.propTypes = {
   product: PropTypes.object.isRequired,
 };
 
 function ProductInfo({ product }) {
-  const handleSubmit = (value) => {
-    console.log(value);
+  const dispatch = useDispatch();
+  const handleSubmit = ({ quantity }) => {
+    dispatch(
+      addToCart({
+        id: product.id,
+        product,
+        quantity,
+      })
+    );
   };
 
   return (
